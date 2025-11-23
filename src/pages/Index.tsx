@@ -75,13 +75,30 @@ const Index = () => {
                 Профессиональное распространение рекламных материалов по Калининграду. Гарантия качества, фотоотчёты, быстрые сроки.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="text-lg px-8">
+                <Button size="lg" className="text-lg px-8" onClick={() => window.location.href = '/#calculator'}>
                   Рассчитать стоимость
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8">
                   <Icon name="MessageCircle" size={20} className="mr-2" />
                   Telegram-бот
+                </Button>
+              </div>
+              <div className="flex flex-wrap gap-3 mt-4">
+                <Button 
+                  variant="link" 
+                  className="text-primary underline p-0 h-auto"
+                  onClick={() => window.location.href = '/client-dashboard'}
+                >
+                  Демо: Кабинет клиента
+                </Button>
+                <span className="text-muted-foreground">•</span>
+                <Button 
+                  variant="link" 
+                  className="text-primary underline p-0 h-auto"
+                  onClick={() => window.location.href = '/promoter-dashboard'}
+                >
+                  Демо: Кабинет промоутера
                 </Button>
               </div>
               <div className="mt-8 flex items-center gap-8">
@@ -100,7 +117,7 @@ const Index = () => {
               </div>
             </div>
 
-            <Card className="shadow-2xl animate-scale-in">
+            <Card className="shadow-2xl animate-scale-in" id="calculator">
               <CardHeader className="bg-gradient-to-r from-primary to-primary/80 text-white">
                 <CardTitle className="text-2xl">Экономия до {Math.round(savings).toLocaleString('ru-RU')} ₽</CardTitle>
                 <CardDescription className="text-white/90">
